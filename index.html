@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yeahia Barbhuiya | Founder • Web Designer • Digital Creator</title>
+<meta name="description" content="Yeahia Barbhuiya — Founder of Gyan Abhyas, web designer and digital creator building educational platforms and creative digital products.">
+<meta name="author" content="Yeahia Barbhuiya">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Yeahia Barbhuiya | Founder • Web Designer • Digital Creator">
+<meta property="og:description" content="I build digital experiences, educational platforms and creative products that turn ideas into something people can use.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/og-cover.jpg">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23E3A857'>Y</text></svg>">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__mark">
+    <span class="loader__glyph">Y</span>
+  </div>
+  <div class="loader__bar"><span></span></div>
+</div>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<!-- NAVIGATION -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#home" class="nav__brand">YB<span class="nav__brand-dot">.</span></a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a href="#home" class="nav__link" data-section="home">Home</a>
+      <a href="#about" class="nav__link" data-section="about">About</a>
+      <a href="#skills" class="nav__link" data-section="skills">Skills</a>
+      <a href="#experience" class="nav__link" data-section="experience">Experience</a>
+      <a href="#projects" class="nav__link" data-section="projects">Projects</a>
+      <a href="#education" class="nav__link" data-section="education">Education</a>
+      <a href="#achievements" class="nav__link" data-section="achievements">Achievements</a>
+      <a href="#contact" class="nav__link" data-section="contact">Contact</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode" aria-pressed="false">
+        <svg class="theme-toggle__icon theme-toggle__icon--sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/></svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav class="mobile-menu__links" aria-label="Mobile">
+    <a href="#home" class="mobile-menu__link" data-section="home"><span>01</span>Home</a>
+    <a href="#about" class="mobile-menu__link" data-section="about"><span>02</span>About</a>
+    <a href="#skills" class="mobile-menu__link" data-section="skills"><span>03</span>Skills</a>
+    <a href="#experience" class="mobile-menu__link" data-section="experience"><span>04</span>Experience</a>
+    <a href="#projects" class="mobile-menu__link" data-section="projects"><span>05</span>Projects</a>
+    <a href="#education" class="mobile-menu__link" data-section="education"><span>06</span>Education</a>
+    <a href="#achievements" class="mobile-menu__link" data-section="achievements"><span>07</span>Achievements</a>
+    <a href="#contact" class="mobile-menu__link" data-section="contact"><span>08</span>Contact</a>
+  </nav>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__blob hero__blob--1"></div>
+      <div class="hero__blob hero__blob--2"></div>
+      <canvas id="particles" class="hero__particles"></canvas>
+      <div class="hero__grid"></div>
+    </div>
+
+    <div class="hero__inner">
+      <div class="hero__status" data-reveal>
+        <span class="hero__status-dot"></span>
+        Available for opportunities
+      </div>
+
+      <div class="hero__content">
+        <div class="hero__portrait" data-reveal>
+          <div class="hero__portrait-ring"></div>
+          <img src="https://api.dicebear.com/7.x/initials/svg?seed=Yeahia%20Barbhuiya&backgroundColor=141311&textColor=E3A857&fontFamily=Fraunces" alt="Portrait of Yeahia Barbhuiya" class="hero__portrait-img" id="heroPortrait">
+        </div>
+
+        <p class="hero__eyebrow" data-reveal>Portfolio &mdash; 2026</p>
+
+        <h1 class="hero__name" id="heroName" aria-label="Yeahia Barbhuiya">
+          <span class="hero__name-line">Yeahia</span>
+          <span class="hero__name-line hero__name-line--accent">Barbhuiya</span>
+        </h1>
+
+        <p class="hero__title" data-reveal>
+          Founder <span class="hero__title-sep">&middot;</span>
+          <span class="typing" id="typingText"></span><span class="typing-cursor" aria-hidden="true"></span>
+        </p>
+
+        <p class="hero__tagline" data-reveal>
+          I build digital experiences, educational platforms and creative products that turn ideas into something people can use.
+        </p>
+
+        <div class="hero__meta" data-reveal>
+          <span class="hero__meta-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+            India
+          </span>
+          <span class="hero__meta-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2.2"/><path d="m3 7 9 6 9-6"/></svg>
+            <a href="mailto:hello@gyanabhyas.com" id="heroEmail">hello@gyanabhyas.com</a>
+          </span>
+        </div>
+
+        <div class="hero__actions" data-reveal>
+          <a href="assets/Yeahia-Barbhuiya-Resume.pdf" download="Yeahia-Barbhuiya-Resume.pdf" class="btn btn--primary magnetic" id="downloadResumeBtn">
+            <span>Download Resume</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v13m0 0-4.5-4.5M12 16l4.5-4.5"/><path d="M4 20h16"/></svg>
+          </a>
+          <a href="#contact" class="btn btn--ghost magnetic">
+            <span>Let's Connect</span>
+          </a>
+        </div>
+
+        <div class="hero__socials" data-reveal aria-label="Social links">
+          <a href="#" class="hero__social" aria-label="LinkedIn" data-social="linkedin">in</a>
+          <a href="#" class="hero__social" aria-label="GitHub" data-social="github">gh</a>
+          <a href="#" class="hero__social" aria-label="Instagram" data-social="instagram">ig</a>
+          <a href="#" class="hero__social" aria-label="YouTube" data-social="youtube">yt</a>
+        </div>
+      </div>
+    </div>
+
+    <button class="hero__scroll" id="heroScroll" aria-label="Scroll to about section">
+      <span>Scroll</span>
+      <svg width="14" height="20" viewBox="0 0 14 20" fill="none"><rect x="1" y="1" width="12" height="18" rx="6" stroke="currentColor" stroke-width="1.4"/><circle class="hero__scroll-dot" cx="7" cy="6" r="1.8" fill="currentColor"/></svg>
+    </button>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="section__inner">
+      <p class="section__eyebrow" data-reveal>About</p>
+      <h2 class="section__title" data-reveal>The person behind the projects</h2>
+
+      <div class="about__grid">
+        <div class="about__visual" data-reveal>
+          <div class="about__visual-frame">
+            <img src="https://api.dicebear.com/7.x/initials/svg?seed=Yeahia%20Barbhuiya&backgroundColor=1a1815&textColor=E3A857&fontFamily=Fraunces" alt="Yeahia Barbhuiya working" class="about__visual-img">
+            <div class="about__visual-thread" aria-hidden="true"></div>
+          </div>
+          <div class="about__badge">
+            <span class="about__badge-num">03+</span>
+            <span class="about__badge-label">Years building</span>
+          </div>
+        </div>
+
+        <div class="about__content">
+          <p class="about__intro" data-reveal>
+            I'm Yeahia Barbhuiya &mdash; founder of <strong>Gyan Abhyas</strong>, a creator building educational and motivational content across English, Bengali and Hindi. I'm also a second-year undergraduate student, which keeps me close to the exact audience I design and build for: learners figuring things out one topic at a time.
+          </p>
+          <p class="about__intro" data-reveal>
+            My work sits at the intersection of teaching, design and technology &mdash; scripting lessons, shaping how they look, and building the platforms that carry them. I care less about chasing trends and more about making things that are genuinely useful to the person on the other end.
+          </p>
+
+          <div class="about__pillars" data-reveal>
+            <div class="about__pillar">
+              <h3>What I do</h3>
+              <p>Educational content, web design, digital products and community-driven learning experiences.</p>
+            </div>
+            <div class="about__pillar">
+              <h3>What drives me</h3>
+              <p>Turning complex ideas into something a beginner can actually hold onto and use.</p>
+            </div>
+            <div class="about__pillar">
+              <h3>Where I'm headed</h3>
+              <p>Growing Gyan Abhyas into a full digital learning platform while sharpening my craft as a builder.</p>
+            </div>
+          </div>
+
+          <div class="about__stats" id="aboutStats">
+            <div class="stat" data-reveal>
+              <span class="stat__number" data-count="3" data-suffix="+">0</span>
+              <span class="stat__label">Years Learning &amp; Building</span>
+            </div>
+            <div class="stat" data-reveal>
+              <span class="stat__number" data-count="10" data-suffix="+">0</span>
+              <span class="stat__label">Projects Shipped</span>
+            </div>
+            <div class="stat" data-reveal>
+              <span class="stat__number" data-count="1000" data-suffix="+">0</span>
+              <span class="stat__label">Community Members</span>
+            </div>
+            <div class="stat" data-reveal>
+              <span class="stat__number" data-count="3" data-suffix="">0</span>
+              <span class="stat__label">Languages of Content</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section skills" id="skills">
+    <div class="section__inner">
+      <p class="section__eyebrow" data-reveal>Skills</p>
+      <h2 class="section__title" data-reveal>Tools I reach for</h2>
+      <p class="section__lead" data-reveal>A working set, kept honest &mdash; every level here is what I'd actually claim in an interview.</p>
+
+      <div class="skills__groups" id="skillsGroups"></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section experience" id="experience">
+    <div class="section__inner">
+      <p class="section__eyebrow" data-reveal>Journey</p>
+      <h2 class="section__title" data-reveal>How it's unfolded so far</h2>
+
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section projects" id="projects">
+    <div class="section__inner">
+      <p class="section__eyebrow" data-reveal>Selected Work</p>
+      <h2 class="section__title" data-reveal>Featured projects</h2>
+      <p class="section__lead" data-reveal>A few things I've built, taught through, and shipped.</p>
+
+      <div class="projects__grid" id="projectsGrid"></div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section education" id="education">
+    <div class="section__inner">
+      <p class="section__eyebrow" data-reveal>Education</p>
+      <h2 class="section__title" data-reveal>Where the learning happens</h2>
+
+      <div class="education__grid" id="educationGrid"></div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="section achievements" id="achievements">
+    <div class="section__inner">
+      <p class="section__eyebrow" data-reveal>Milestones</p>
+      <h2 class="section__title" data-reveal>Achievements</h2>
+
+      <div class="achievements__grid" id="achievementsGrid"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="cta__inner" data-reveal>
+      <h2 class="cta__title">Let's build something meaningful.</h2>
+      <p class="cta__subtitle">Looking for someone who combines creativity, technology and execution?</p>
+      <div class="cta__actions">
+        <a href="assets/Yeahia-Barbhuiya-Resume.pdf" download="Yeahia-Barbhuiya-Resume.pdf" class="btn btn--primary magnetic">
+          <span>Download Resume</span>
+        </a>
+        <a href="#contact" class="btn btn--outline magnetic">
+          <span>Contact Me</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="section__inner">
+      <p class="section__eyebrow" data-reveal>Contact</p>
+      <h2 class="section__title" data-reveal>Get in touch</h2>
+
+      <div class="contact__grid">
+        <div class="contact__info" data-reveal>
+          <a href="mailto:hello@gyanabhyas.com" class="contact__item">
+            <span class="contact__item-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2.2"/><path d="m3 7 9 6 9-6"/></svg>
+            </span>
+            <span>
+              <span class="contact__item-label">Email</span>
+              <span class="contact__item-value" id="contactEmail">hello@gyanabhyas.com</span>
+            </span>
+          </a>
+          <a href="tel:+910000000000" class="contact__item">
+            <span class="contact__item-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.9c0-.6.4-1 1-1h3.2c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z"/></svg>
+            </span>
+            <span>
+              <span class="contact__item-label">Phone</span>
+              <span class="contact__item-value" id="contactPhone">+91 00000 00000</span>
+            </span>
+          </a>
+          <div class="contact__item">
+            <span class="contact__item-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+            </span>
+            <span>
+              <span class="contact__item-label">Location</span>
+              <span class="contact__item-value">India</span>
+            </span>
+          </div>
+
+          <div class="contact__socials">
+            <a href="#" aria-label="LinkedIn" data-social="linkedin">LinkedIn</a>
+            <a href="#" aria-label="GitHub" data-social="github">GitHub</a>
+            <a href="#" aria-label="Instagram" data-social="instagram">Instagram</a>
+            <a href="#" aria-label="YouTube" data-social="youtube">YouTube</a>
+          </div>
+        </div>
+
+        <form class="contact__form" id="contactForm" novalidate data-reveal>
+          <div class="field">
+            <input type="text" id="fieldName" name="name" placeholder=" " autocomplete="name" required>
+            <label for="fieldName">Your name</label>
+            <span class="field__error" id="errorName" role="alert"></span>
+          </div>
+          <div class="field">
+            <input type="email" id="fieldEmail" name="email" placeholder=" " autocomplete="email" required>
+            <label for="fieldEmail">Your email</label>
+            <span class="field__error" id="errorEmail" role="alert"></span>
+          </div>
+          <div class="field">
+            <input type="text" id="fieldSubject" name="subject" placeholder=" " required>
+            <label for="fieldSubject">Subject</label>
+            <span class="field__error" id="errorSubject" role="alert"></span>
+          </div>
+          <div class="field">
+            <textarea id="fieldMessage" name="message" placeholder=" " rows="5" required></textarea>
+            <label for="fieldMessage">Message</label>
+            <span class="field__error" id="errorMessage" role="alert"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary magnetic" id="submitBtn">
+            <span>Send Message</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+          </button>
+
+          <p class="contact__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__inner">
+    <p>&copy; <span id="footerYear"></span> Yeahia Barbhuiya. Built by hand, one section at a time.</p>
+    <a href="#top" class="footer__top">Back to top</a>
+  </div>
+</footer>
+
+<!-- PROJECT MODAL -->
+<div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+  <div class="modal__backdrop" id="modalBackdrop"></div>
+  <div class="modal__panel">
+    <button class="modal__close" id="modalClose" aria-label="Close project details">&times;</button>
+    <div class="modal__body" id="modalBody"></div>
+  </div>
+</div>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
